@@ -1,4 +1,4 @@
-# Lo primero es importar todas las librerias a utilizar
+#Lo primero es importar todas las librerias a utilizar
 from pathlib import Path
 import pyqrcode
 import pyotp
@@ -6,11 +6,17 @@ import webbrowser
 
 # Luego se definen los colores
 class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
     OKCYAN = '\033[96m'
     OKGREEN = '\033[92m'
     WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
 
-# Aca configuro el banner del script para un correcto entendimiento
+#Aca configuro el banner del script para un correcto entendimiento
 print("")
 print (bcolors.WARNING +  "====== Gonzalo Carrasco ======" + bcolors.ENDC)
 print("")
@@ -58,4 +64,4 @@ while not otp_is_valid:
         print("El codigo OTP es valido")
     else:
         print("El codigo OTP es invalido, por favor ingreselo nuevamente")
-                                                                   
+                                                                           
